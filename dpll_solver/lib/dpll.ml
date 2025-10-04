@@ -19,6 +19,8 @@ let filter_map filter list =
       | Some e -> aux t (e::ret)
   in aux list []
 
+(** Voici une proposition de types pour une implémentation simple.
+    Vous pouvez éventuellement changer les types dans un deuxième temps. *)
 type literal = int
 type clause = literal list
 type cnf = clause list

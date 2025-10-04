@@ -1,8 +1,7 @@
 (library
  (name dpll_solver)
  (libraries str)
+ (preprocess (pps ppx_inline_test))
  )
 
-
-
-(env (dev (flags :standard -warn-error -26-27-39)))
+(env (dev (flags :standard -warn-error -26-27-32-39)))

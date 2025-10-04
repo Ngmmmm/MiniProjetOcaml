@@ -27,7 +27,7 @@ let rec parse_cnf_file = function
   | []     -> []
   | "p"::"cnf"::_::_::l -> parse_cnf [] l
   | _::l -> parse_cnf_file l
-     
-let parse x =
-  Str.split (Str.regexp "[ \n\t\r\012]+") (read_from_file x)
+
+let parse filename =
+  Str.split (Str.regexp "[ \n\t\r\012]+") (read_from_file filename)
   |> parse_cnf_file
