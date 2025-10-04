@@ -19,6 +19,10 @@ let filter_map filter list =
       | Some e -> aux t (e::ret)
   in aux list []
 
+(* Ceci est un exemple de test pour la fonction filter_map. *)
+let%test "filter_map" =
+  (filter_map (fun x -> if x mod 2 = 0 then Some (x * 2) else None) [1; 2; 3; 4]) = [8; 4]
+
 (** Voici une proposition de types pour une implémentation simple.
     Vous pouvez éventuellement changer les types dans un deuxième temps. *)
 type literal = int
@@ -26,6 +30,9 @@ type clause = literal list
 type cnf = clause list
 type interpretation = int list
 type resultat = Sat of interpretation | Unsat
+
+(** Avec ce choix de type cette fonction est l'identité. *)
+let cnf_of_int_list_list (l: int list list) : cnf = l
 
 (** print_modele : resultat -> unit afficher le résultat *)
 let print_modele: resultat -> unit = function
@@ -42,22 +49,24 @@ let simplifie l clauses =
   (* à compléter *)
   []
 
-(** solveur_split : cnf -> interpretation -> resultat
+(** solveur_split_rec : cnf -> interpretation -> resultat
    exemple d'utilisation de `simplifie' cette fonction ne doit pas être modifiée, sauf si vous changez 
    le type de la fonction simplifie *)
-let rec solveur_split clauses interpretation =
+let rec solveur_split_rec clauses interpretation =
   (* l'ensemble vide de clauses est satisfiable *)
   if clauses = [] then Sat interpretation else
   (* la clause vide n'est jamais satisfiable *)
   if mem [] clauses then Unsat else
   (* branchement *) 
   let l = hd (hd clauses) in
-  let branche = solveur_split (simplifie l clauses) (l::interpretation) in
+  let branche = solveur_split_rec (simplifie l clauses) (l::interpretation) in
   match branche with
-  | Unsat -> solveur_split (simplifie (-l) clauses) ((-l)::interpretation)
+  | Unsat -> solveur_split_rec (simplifie (-l) clauses) ((-l)::interpretation)
   | _    -> branche
 
-(** solveur dpll récursif *)
+let solveur_split clauses = solveur_split_rec clauses []
+
+(** Solveur dpll récursif *)
 
 (** pur : cnf -> literal option
     - si `clauses' contient au moins un littéral pur, retourne
@@ -79,3 +88,5 @@ let unitaire clauses =
 let rec solveur_dpll_rec clauses interpretation =
   (* à compléter *)
   Unsat
+
+let solveur_dpll clauses = solveur_dpll_rec clauses []

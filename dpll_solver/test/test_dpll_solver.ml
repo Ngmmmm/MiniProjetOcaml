@@ -18,8 +18,8 @@ let coloriage = [
   [-14;-17];[-15;-18]]
 
 
-  let () = print_modele (solveur_split systeme [])
-  let () = print_modele (solveur_split coloriage [])
+  let () = print_modele (solveur_split (cnf_of_int_list_list systeme))
+  let () = print_modele (solveur_split (cnf_of_int_list_list coloriage))
 
-  let () = print_modele (solveur_dpll_rec systeme [])
-  let () = print_modele (solveur_dpll_rec coloriage [])
+  let () = print_modele (solveur_dpll (cnf_of_int_list_list systeme))
+  let () = print_modele (solveur_dpll (cnf_of_int_list_list coloriage))
