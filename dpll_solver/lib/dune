@@ -1,2 +1,8 @@
 (library
- (name dpll_solver))
+ (name dpll_solver)
+ (libraries str)
+ )
+
+
+
+(env (dev (flags :standard -warn-error -26-27-39)))
