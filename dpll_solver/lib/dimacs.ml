@@ -1,3 +1,5 @@
+(** Dimacs : module pour parser des fichiers au format DIMACS *)
+(** Vous n'avez pas besoin de modifier ce fichier. *)
 
 let read_from_file filename =
   let lines = ref "" in
