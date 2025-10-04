@@ -1,7 +1,0 @@
-# dune init proj dpll_solver
-# OCAMLPARAM: unset
-# Shared cache: enabled-except-user-rules
-# Shared cache location: /Users/juliennarboux/.cache/dune/db
-# Workspace root:
-# /Users/juliennarboux/Repository/pariscite/dpll-en-ocaml/dpll_solver
-# Auto-detected concurrency: 8
