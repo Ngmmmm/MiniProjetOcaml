@@ -70,7 +70,7 @@ pour compiler un exécutable natif et le tester sur des fichiers au
 format DIMACS. Vous trouverez des exemples de fichiers dans le repertoire examples.
 
 Par exemple,
-  dune exec dpll_solver ../examples/SAT/sudoku-4x4.cnf
+ ` dune exec dpll_solver ../examples/SAT/sudoku-4x4.cnf `
  
 devrait répondre
 
