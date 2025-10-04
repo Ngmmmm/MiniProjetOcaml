@@ -67,14 +67,11 @@ pouvez utiliser dune pour construire le projet en appelant
   dune build
 
 pour compiler un exécutable natif et le tester sur des fichiers au
-format DIMACS. Vous trouverez des exemples de fichiers à l'adresse
-
-  https://www.irif.fr/~schmitz/teach/2024_lo5/dimacs/
+format DIMACS. Vous trouverez des exemples de fichiers dans le repertoire examples.
 
 Par exemple,
-
-  ./dpll chemin/vers/sudoku-4x4.cnf
-
+  dune exec dpll_solver ../examples/SAT/sudoku-4x4.cnf
+ 
 devrait répondre
 
 SAT
@@ -88,7 +85,7 @@ comme indiqué juste ci-dessus.
 Rendre son mini-projet
 ----------------------
 
- - date limite : 25 octobre 2024, 18h59
+ - date limite : 25 octobre 2025, 18h59
  - sur la page Moodle du cours
      https://moodle.u-paris.fr/course/view.php?id=1657
  - sous la forme d'une archive XX-nom1-nom2.zip où `XX' est le numéro
