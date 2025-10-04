@@ -15,7 +15,7 @@ OCaml. Vous devez compléter pour cela le code dans le fichier `dpll-solver/lib/
 Ces types et les commentaires dans dpll.ml sont indicatifs. D'autres
 choix peuvent être pertinents; par exemple, unitaire et pur
 pourraient aussi être de type int list list -> int et utiliser les exceptions. Aussi, les
-définitions `let foo ...' peuvent être transformées en `let rec foo ...' ou
+définitions `let foo ...` peuvent être transformées en `let rec foo ...` ou
 inversement.
 
 Documentation 
@@ -74,11 +74,13 @@ Par exemple,
  
 devrait répondre
 
+```
 SAT
 -111 -112 113 -114 -121 -122 -123 124 -131 132 -133 -134 141 -142 -143 -144 -211 212 -213 -214 221 -222 -223 -224 -231 -232 -233 234 -241 -242 243 -244 311 -312 -313 -314 -321 322 -323 -324 -331 -332 333 -334 -341 -342 -343 344 -411 -412 -413 414 -421 -422 423 -424 431 -432 -433 -434 -441 442 -443 -444 0
+```
 
 Si vous faites des affichages pour vos propres tests, il faudra penser
-à commenter ces tests pour que votre programme réponde exactement
+à commenter ces tests pour que votre programme répondre exactement
 comme indiqué juste ci-dessus. 
 
 
