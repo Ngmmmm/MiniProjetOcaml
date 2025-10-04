@@ -1,5 +1,5 @@
-                Mini-projet 1 : solveur DPLL récursif
-
+Mini-projet 1 : solveur DPLL récursif
+=====================================
 
 Objectif du mini-projet
 -----------------------
