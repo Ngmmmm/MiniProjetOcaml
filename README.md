@@ -5,16 +5,16 @@ Objectif du mini-projet
 -----------------------
 
 Le but du mini-projet est d'implémenter un solveur DPLL récursif en
-OCaml. Vous devez compléter pour cela le code dans le fichier lib/dpll.ml :
+OCaml. Vous devez compléter pour cela le code dans le fichier `dpll-solver/lib/dpll.ml` :
 
- - la fonction simplifie : int -> int list list -> int list list
- - la fonction unitaire : int list list -> int
- - la fonction pur : int list list -> int
- - la fonction solveur_dpll_rec : int list list -> int list -> int list option
+ - la fonction `simplifie : int -> int list list -> int list list`
+ - la fonction `unitaire : int list list -> int option`
+ - la fonction pur : `int list list -> int option`
+ - la fonction solveur_dpll_rec : `int list list -> int list -> int list option`
 
 Ces types et les commentaires dans dpll.ml sont indicatifs. D'autres
 choix peuvent être pertinents; par exemple, unitaire et pur
-pourraient aussi être de type int list list -> int option. Aussi, les
+pourraient aussi être de type int list list -> int et utiliser les exceptions. Aussi, les
 définitions `let foo ...' peuvent être transformées en `let rec foo ...' ou
 inversement.
 
