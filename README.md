@@ -5,14 +5,14 @@ Objectif du mini-projet
 -----------------------
 
 Le but du mini-projet est d'implémenter un solveur DPLL récursif en
-OCaml. Vous devez compléter pour cela le code dans le fichier `dpll-solver/lib/dpll.ml` :
+OCaml. Vous devez compléter pour cela le code dans le fichier `dpll_solver/lib/dpll.ml` :
 
- - la fonction `simplifie : int -> int list list -> int list list`
- - la fonction `unitaire : int list list -> int option`
- - la fonction pur : `int list list -> int option`
- - la fonction solveur_dpll_rec : `int list list -> int list -> int list option`
+ - la fonction `simplifie : literal -> cnf -> cnf `
+ - la fonction `unitaire : cnf -> literal option`
+ - la fonction pur : `cnf -> literal option`
+ - la fonction solveur_dpll_rec : `cnf -> interpretation -> interpretation option`
 
-Ces types et les commentaires dans dpll.ml sont indicatifs. D'autres
+Les types et les commentaires dans dpll.ml sont indicatifs. D'autres
 choix peuvent être pertinents; par exemple, unitaire et pur
 pourraient aussi être de type int list list -> int et utiliser les exceptions. Aussi, les
 définitions `let foo ...` peuvent être transformées en `let rec foo ...` ou
@@ -61,14 +61,14 @@ Tester son mini-projet
 ----------------------
 
 Pour tester votre projet vous devez d'abord tester la correction :
-  - écrire des tests unitaires, qui testent la correction de chacunes des fonctions du module dpll. Pour cela, vous pouvez utiliser les tests 'inline', un exemple est donné dans le fichier dpll.ml.
-  - puis écrire des tests qui vérifient que votre programme se comporte correctement de manière globale sur les exemples fournis. Votre programme ne va pas résoudre forcément tous les exemples en un temps raisonnable, mais quand il termine il doit renvoyer le bon résultat.
+  - écrire des tests unitaires, qui testent la correction de chacunes des fonctions du module dpll. Pour cela, vous pouvez utiliser les tests 'inline', un exemple est donné dans le fichier `dpll.ml`.
+  - puis écrire des tests qui vérifient que votre programme se comporte correctement de manière globale sur les exemples fournis. Votre programme ne va pas résoudre forcément tous les exemples en un temps raisonnable, mais quand il termine il doit renvoyer le bon résultat. Comment tester votre programme ? vous pouvez saisir à la main le résultat obtenu mais aussi utiliser des tests dos à dos et/ou écrire une fonction qui vérifie le résultat dans certains cas.
 
 Ensuite vous pouvez passer aux tests de perfomance:
   - sur chacune des fonctions intermédiaires
   - sur le programme global  
 
-Outre les exemples de test inclus dans le répertoire test (exemple_3_12,
+Outre les exemples inclus dans le répertoire test (exemple_3_12,
 exemple_7_2, exemple_7_4, exemple_7_8, systeme, coloriage), vous
 pouvez utiliser dune pour construire le projet en appelant
 
@@ -91,6 +91,12 @@ Si vous faites des affichages pour vos propres tests, il faudra penser
 à commenter ces tests pour que votre programme répondre exactement
 comme indiqué juste ci-dessus. 
 
+Indication de barème
+--------------------
+
+Un projet bien commenté et bien expliqué et qui fonctionne: 16/20
+Si en plus la correction et les perfomances ont été bien testées et la méthodologie de test expliquée: 18/20 
+Si vous vous avez optimisé les perfomances en introduisant des structures de données pertinentes et/ou en implémentant un algorithme plus efficace, et que la perfomance est bien évaluée sur des benchmarks: 20/20
 
 Rendre son mini-projet
 ----------------------
