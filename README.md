@@ -9,12 +9,12 @@ OCaml. Vous devez compléter pour cela le code dans le fichier `dpll_solver/lib/
 
  - la fonction `simplifie : literal -> cnf -> cnf `
  - la fonction `unitaire : cnf -> literal option`
- - la fonction pur : `cnf -> literal option`
- - la fonction solveur_dpll_rec : `cnf -> interpretation -> interpretation option`
+ - la fonction `pur : cnf -> literal option`
+ - la fonction `solveur_dpll_rec : cnf -> interpretation -> interpretation option`
 
-Les types et les commentaires dans dpll.ml sont indicatifs. D'autres
-choix peuvent être pertinents; par exemple, unitaire et pur
-pourraient aussi être de type int list list -> int et utiliser les exceptions. Aussi, les
+Les types et les commentaires dans `dpll.ml` sont indicatifs. D'autres
+choix peuvent être pertinents; par exemple, `unitaire` et `pur`
+pourraient aussi être de type `int list list -> int` et utiliser les exceptions. Aussi, les
 définitions `let foo ...` peuvent être transformées en `let rec foo ...` ou
 inversement.
 
@@ -27,18 +27,18 @@ pourcentage important de votre note finale. Vous devrez donc soigner
 les explications qui accompagneront votre code et ce sur deux volets
 principaux :
 
-1. Le fichier RENDU contient des questions précises sur votre
+1. Le fichier `RENDU` contient des questions précises sur votre
    implémentation. Vous êtes requis d'y répondre en complétant le même
    fichier, qui devra faire partie de votre rendu final. Vos réponses
    doivent être claires, précises et préférablement succinctes. À la
    lecture de vos réponses, une compréhension globale, sans ambiguïté,
    de votre implémentation devra facilement se dégager.
 
-   Un mini-projet sans fichier RENDU rempli ne recevra pas de note.
+   Un mini-projet sans fichier `RENDU` rempli ne recevra **pas de note**.
 
 2. Vous devez impérativement commenter votre code dans le but de
    complémenter les explications fournies lors du remplissage du
-   fichier RENDU (volet 1 ci-dessus). Dans le même esprit, vos
+   fichier `RENDU` (volet 1 ci-dessus). Dans le même esprit, vos
    commentaires doivent être clairs et précis, ils doivent donner une
    compréhension plus fine des détails de votre implémentation.
 
@@ -53,24 +53,24 @@ Assurez-vous que votre code compile avant de le rendre.
 
 En outre, vous devez prioriser vos objectifs d'une manière saine : un
 code correct et lent est meilleur qu'un code erroné et
-rapide. Résolvez le problème, puis optimiser votre code (do it right,
-then do it better). Une implémentation optimisée n'aura un impact
+rapide. Résolvez le problème, puis optimiser votre code (_do it right,
+then do it better_). Une implémentation optimisée n'aura un impact
 positif sur votre note finale que si elle est correcte.
 
 Tester son mini-projet
 ----------------------
 
 Pour tester votre projet vous devez d'abord tester la correction :
-  - écrire des tests unitaires, qui testent la correction de chacunes des fonctions du module dpll. Pour cela, vous pouvez utiliser les tests 'inline', un exemple est donné dans le fichier `dpll.ml`.
-  - puis écrire des tests qui vérifient que votre programme se comporte correctement de manière globale sur les exemples fournis. Votre programme ne va pas résoudre forcément tous les exemples en un temps raisonnable, mais quand il termine il doit renvoyer le bon résultat. Comment tester votre programme ? vous pouvez saisir à la main le résultat obtenu mais aussi utiliser des tests dos à dos et/ou écrire une fonction qui vérifie le résultat dans certains cas.
+  - écrire des tests unitaires, qui testent la correction de chacunes des fonctions du module dpll. Pour cela, vous pouvez utiliser les tests _inline_, un exemple est donné dans le fichier `dpll.ml`.
+  - puis écrire des tests qui vérifient que votre programme se comporte correctement de manière globale sur les exemples fournis. Votre programme ne va pas résoudre forcément tous les exemples en un temps raisonnable, mais quand il termine il doit renvoyer le bon résultat. Comment tester votre programme ? Vous pouvez saisir à la main le résultat obtenu mais aussi utiliser des tests dos à dos et/ou écrire une fonction qui vérifie le résultat dans certains cas.
 
-Ensuite vous pouvez passer aux tests de perfomance:
+Ensuite vous pouvez passer aux tests de perfomance :
   - sur chacune des fonctions intermédiaires
   - sur le programme global  
 
-Outre les exemples inclus dans le répertoire test (exemple_3_12,
-exemple_7_2, exemple_7_4, exemple_7_8, systeme, coloriage), vous
-pouvez utiliser dune pour construire le projet en appelant
+Outre les exemples inclus dans le répertoire test (`exemple_3_12`,
+`exemple_7_2`, `exemple_7_4`, `exemple_7_8`, `systeme`, `coloriage`), vous
+pouvez utiliser `dune` pour construire le projet en appelant
 
   dune build
 
@@ -94,14 +94,14 @@ comme indiqué juste ci-dessus.
 Indication de barème
 --------------------
 
-Un projet bien commenté et bien expliqué et qui fonctionne: 16/20
-Si en plus la correction et les perfomances ont été bien testées et la méthodologie de test expliquée: 18/20 
-Si vous vous avez optimisé les perfomances en introduisant des structures de données pertinentes et/ou en implémentant un algorithme plus efficace, et que la perfomance est bien évaluée sur des benchmarks: 20/20
+Un projet bien commenté et bien expliqué et qui fonctionne : 8/10
+Si en plus la correction et les perfomances ont été bien testées et la méthodologie de test expliquée : 9/10 
+Si vous vous avez optimisé les perfomances en introduisant des structures de données, des heuristiques, ou des choix algorithmiques pertinents, et que la perfomance est bien évaluée sur des benchmarks : 10/10
 
 Rendre son mini-projet
 ----------------------
 
- - date limite : 25 octobre 2025, 18h59
+ - date limite : **25 octobre 2025, 18h59**
  - sur la page Moodle du cours
      https://moodle.u-paris.fr/course/view.php?id=1657
  - sous la forme d'une archive XX-nom1-nom2.zip où `XX' est le numéro
