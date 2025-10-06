@@ -62,6 +62,11 @@ Tester son mini-projet
 
 Pour tester votre projet vous devez d'abord tester la correction :
   - écrire des tests unitaires, qui testent la correction de chacunes des fonctions du module dpll. Pour cela, vous pouvez utiliser les tests _inline_, un exemple est donné dans le fichier `dpll.ml`.
+  Pour lancer les tests vous pouvez lancer la commande:
+  ```
+  dune test
+  ```
+  
   - puis écrire des tests qui vérifient que votre programme se comporte correctement de manière globale sur les exemples fournis. Votre programme ne va pas résoudre forcément tous les exemples en un temps raisonnable, mais quand il termine il doit renvoyer le bon résultat. Comment tester votre programme ? Vous pouvez saisir à la main le résultat obtenu mais aussi utiliser des tests dos à dos et/ou écrire une fonction qui vérifie le résultat dans certains cas.
 
 Ensuite vous pouvez passer aux tests de perfomance :
