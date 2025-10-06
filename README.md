@@ -71,17 +71,17 @@ Ensuite vous pouvez passer aux tests de perfomance :
 Outre les exemples inclus dans le répertoire test (`exemple_3_12`,
 `exemple_7_2`, `exemple_7_4`, `exemple_7_8`, `systeme`, `coloriage`), vous
 pouvez utiliser `dune` pour construire le projet en appelant
-
-  dune build
-
+```
+dune build
+```
 pour compiler un exécutable natif et le tester sur des fichiers au
 format DIMACS. Vous trouverez des exemples de fichiers dans le repertoire examples.
 
 Par exemple,
- ` dune exec dpll_solver ../examples/SAT/sudoku-4x4.cnf `
- 
+```
+dune exec dpll_solver ../examples/SAT/sudoku-4x4.cnf
+```
 devrait répondre
-
 ```
 SAT
 -111 -112 113 -114 -121 -122 -123 124 -131 132 -133 -134 141 -142 -143 -144 -211 212 -213 -214 221 -222 -223 -224 -231 -232 -233 234 -241 -242 243 -244 311 -312 -313 -314 -321 322 -323 -324 -331 -332 333 -334 -341 -342 -343 344 -411 -412 -413 414 -421 -422 423 -424 431 -432 -433 -434 -441 442 -443 -444 0
@@ -104,10 +104,10 @@ Rendre son mini-projet
  - date limite : **25 octobre 2025, 18h59**
  - sur la page Moodle du cours
      https://moodle.u-paris.fr/course/view.php?id=1657
- - sous la forme d'une archive XX-nom1-nom2.zip où `XX' est le numéro
+ - sous la forme d'une archive XX-nom1-nom2.zip où `XX` est le numéro
    de binôme déclaré à la page
      https://moodle.u-paris.fr/mod/choicegroup/view.php?id=82687
-   et `nom1' et `nom2' sont les noms de famille des deux membres du
+   et `nom1` et `nom2` sont les noms de famille des deux membres du
    binôme, contenant l'arborescence suivante :
      XX-nom1-nom2/dpll.ml
      XX-nom1-nom2/dimacs.ml
