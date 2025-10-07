@@ -66,8 +66,8 @@ Pour tester votre projet vous devez d'abord tester la correction :
   ```
   dune test
   ```
-  
-  - puis écrire des tests qui vérifient que votre programme se comporte correctement de manière globale sur les exemples fournis. Votre programme ne va pas résoudre forcément tous les exemples en un temps raisonnable, mais quand il termine il doit renvoyer le bon résultat. Comment tester votre programme ? Vous pouvez saisir à la main le résultat obtenu mais aussi utiliser des tests dos à dos et/ou écrire une fonction qui vérifie le résultat dans certains cas.
+
+  - puis écrire des tests qui vérifient que votre programme se comporte correctement de manière globale sur les exemples fournis. Votre programme ne va pas résoudre forcément tous les exemples en un temps raisonnable, mais quand il termine il doit renvoyer le bon résultat. Comment tester votre programme ? Vous pouvez saisir à la main le résultat obtenu mais aussi utiliser des tests dos à dos et/ou écrire une fonction qui vérifie le résultat dans le cas SAT.
 
 Ensuite vous pouvez passer aux tests de perfomance :
   - sur chacune des fonctions intermédiaires
