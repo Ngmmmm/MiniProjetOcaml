@@ -19,9 +19,21 @@ let filter_map filter list =
       | Some e -> aux t (e::ret)
   in aux list []
 
-(* Ceci est un exemple de test pour la fonction filter_map. *)
+(* Ceci est un exemple de test unitaire pour la fonction filter_map. *)
 let%test "filter_map" =
   (filter_map (fun x -> if x mod 2 = 0 then Some (x * 2) else None) [1; 2; 3; 4]) = [8; 4]
+
+(* Voici d'autres exemples de tests unitaires dont vous pouvez vous inspirer pour tester vos fonctions. *)
+let rec big_list n acc =
+  if n <= 0 then acc else big_list (n-1) (n::acc)
+
+(* On teste d'abord sur une petite liste.*)
+let %test "length vide" = (length [] = 0)
+let %test "length 1" = (length [1] = 1)
+let %test "length 3" = (length [1;2;3] = 3)
+(* Puis sur une grande liste pour vérifier qu'il n'y a pas de débordement de pile. *)
+let %test "length big" = let big = 10000000 in (length (big_list big []) = big)
+
 
 (** Voici une proposition de types pour une implémentation simple.
     Vous pouvez éventuellement changer les types dans un deuxième temps. *)
