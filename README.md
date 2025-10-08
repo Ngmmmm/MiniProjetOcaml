@@ -45,6 +45,23 @@ principaux :
    Un code non commenté entraînera automatiquement une note finale
    lourdement pénalisée.
 
+Compiler son projet
+-------------------
+
+Le projet est fourni avec la fichier de configuration permettant de le compiler avec `dune`.
+`dune`et les dépendances nécessaires ont été installées sur les machines de l'UFR d'Informatique.
+
+Pour compiler votre programme, placez vous dans le répertoire `dpll_solver` et tapez:
+```
+dune build
+```
+
+Il est normal de voir des *Warning* qui indiquent des variables non-utilisées dans le code à compléter.
+
+Pour exécuter votre programme, il faut utiliser la commande:
+```
+dune exec dpll_solver ../examples/SAT/sudoku-4x4.cnf
+```
 
 Code correct vs. code optimisé
 ------------------------------
@@ -61,7 +78,7 @@ Tester son mini-projet
 ----------------------
 
 Pour tester votre projet vous devez d'abord tester la correction :
-  - écrire des tests unitaires, qui testent la correction de chacunes des fonctions du module dpll. Pour cela, vous pouvez utiliser les tests _inline_, un exemple est donné dans le fichier `dpll.ml`.
+  - écrire des tests unitaires, qui testent la correction de chacunes des fonctions du module dpll. Pour cela, vous pouvez utiliser les tests _inline_, des exemples sont donnés dans le fichier `dpll.ml`.
   Pour lancer les tests vous pouvez lancer la commande:
   ```
   dune test
