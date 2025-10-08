@@ -5,7 +5,10 @@ Objectif du mini-projet
 -----------------------
 
 Le but du mini-projet est d'implémenter un solveur DPLL récursif en
-OCaml. Vous devez compléter pour cela le code dans le fichier `dpll_solver/lib/dpll.ml` :
+OCaml. Vous pouvez partir de ce code en forkant ce projet Gitlab, votre projet devra 
+être privé.
+
+Vous devez compléter pour cela le code dans le fichier `dpll_solver/lib/dpll.ml` :
 
  - la fonction `simplifie : literal -> cnf -> cnf `
  - la fonction `unitaire : cnf -> literal option`
@@ -14,8 +17,8 @@ OCaml. Vous devez compléter pour cela le code dans le fichier `dpll_solver/lib/
 
 Les types et les commentaires dans `dpll.ml` sont indicatifs. D'autres
 choix peuvent être pertinents; par exemple, `unitaire` et `pur`
-pourraient aussi être de type `int list list -> int` et utiliser les exceptions. Aussi, les
-définitions `let foo ...` peuvent être transformées en `let rec foo ...` ou
+pourraient aussi être de type `int list list -> int` et utiliser les exceptions. 
+Aussi, les définitions `let foo ...` peuvent être transformées en `let rec foo ...` ou
 inversement.
 
 Documentation 
@@ -48,8 +51,9 @@ principaux :
 Compiler son projet
 -------------------
 
-Le projet est fourni avec la fichier de configuration permettant de le compiler avec `dune`.
+Le projet est fourni avec les fichiers de configuration permettant de le compiler avec le système `dune`.
 `dune`et les dépendances nécessaires ont été installées sur les machines de l'UFR d'Informatique.
+(Sous un système de type debian/ubuntu/…, cela peut nécessiter l'installation de paquets via la commande `sudo apt-get install ocaml-dune libppx-inline-test-ocaml-dev libppx-inline-test-ocaml libppx-assert-ocaml libppx-assert-ocaml-dev libppx-hash-ocaml libppx-hash-ocaml-dev libppx-enumerate-ocaml libppx-enumerate-ocaml-dev libjane-street-headers-ocaml libjane-street-headers-ocaml-dev`)
 
 Pour compiler votre programme, placez vous dans le répertoire `dpll_solver` et tapez:
 ```
@@ -97,7 +101,7 @@ pouvez utiliser `dune` pour construire le projet depuis le répertoire `dpll_sol
 dune build
 ```
 pour compiler un exécutable natif et le tester sur des fichiers au
-format DIMACS. (Sous un système de type debian/ubuntu/…, cela peut nécessiter l'installation de paquets via la commande `sudo apt-get install ocaml-dune libppx-inline-test-ocaml-dev libppx-inline-test-ocaml libppx-assert-ocaml libppx-assert-ocaml-dev libppx-hash-ocaml libppx-hash-ocaml-dev libppx-enumerate-ocaml libppx-enumerate-ocaml-dev libjane-street-headers-ocaml libjane-street-headers-ocaml-dev`)
+format DIMACS. 
 
 Vous trouverez des exemples de fichiers dans le repertoire `examples`.
 
