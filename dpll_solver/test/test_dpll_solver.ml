@@ -17,8 +17,11 @@ let coloriage = [
   [-8;-17];[-9;-18];[-10;-13];[-11;-14];[-12;-15];[-13;-16];
   [-14;-17];[-15;-18]]
 
+let () = print_string "Test 1:\n"
 let () = print_modele (solveur_split (cnf_of_int_list_list systeme))
+let () = print_string "Test 2:\n"
 let () = print_modele (solveur_dpll (cnf_of_int_list_list systeme))
-
+let () = print_string "Test 3:\n"
 let () = print_modele (solveur_split (cnf_of_int_list_list coloriage))
+let () = print_string "Test 4:\n"
 let () = print_modele (solveur_dpll (cnf_of_int_list_list coloriage))
